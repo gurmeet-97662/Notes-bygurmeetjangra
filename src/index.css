@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+i{
+  cursor: pointer;
+  
+}
+
+.card-body{
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: whitesmoke;
+}
