@@ -11,14 +11,16 @@ function Notes(props) {
   const ref = useRef(null);
   const refClose = useRef(null);
   const [note, setNote]= useState({ id: "", etitle: "", edescription: "", etag: ""})
+  
   useEffect(() => {
     if(localStorage.getItem('token')){
+     
     getAllNotes();
     }
     else{
      history.push("/login")
     }
-  }, []);
+  }, [getAllNotes, history]);
   const updateNote = (currentNote) => {
     ref.current.click();
     setNote({ id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag})
